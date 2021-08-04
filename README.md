@@ -34,7 +34,7 @@ python ETL_setup.py
 
 Update ETL Pipeline
 ```
-ETL_update.py
+python ETL_update.py
 ``` 
 
 # About The Project <a name='AboutTheProject'></a>
@@ -44,7 +44,8 @@ ETL_update.py
 The pipeline is used to extract and preprocess COVID-19 Data from ourworldindata.org. The cleaned data will be loaded into a MySQL Database. The database will then be connected to a Tableau Dashboard that show the total confirmed COVID-19 Cases Per Continent. 
 
 ![Confirmed Cases By Continent](./images/Confirmed_Cases_By_Continent.png)
-NOTE: In the Tableau Workbook, you can activate animations to show confirmed cases per day per continent. 
+
+[Tableau Public](https://public.tableau.com/views/COVID-19ConfirmedCasesByContinent/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link) - Due to Tableau Public, the data is static and you cannot view the animations. The data is relevant up till Aug 2nd 2021. I have attached a MP4 recording of the animations. In addition, you can activate animations in the Tableau Workbook to see the confirmed cases per day per continent. 
 
 **Files:**
 
@@ -53,6 +54,7 @@ NOTE: In the Tableau Workbook, you can activate animations to show confirmed cas
 * COVID-19 Dashboard.twb
 * CHANGELOG&#46;md
 * environment.yml 
+* Confirmed_Cases_By_Continent - Dashboard Video.mp4
 
 `ETL_setup.py` - Initial Setup - Section 1 
 1. Check if directory has existing history log 
@@ -63,7 +65,7 @@ NOTE: In the Tableau Workbook, you can activate animations to show confirmed cas
 6. Query to create Table for Tableau Dashboard
 7. Create history log
 
-`ETL_update.py` Update ETL Pipeline - Section 2
+`ETL_update.py` - Update ETL Pipeline - Section 2
 1. Convert history log to dataframe
 2. Check if files are updated via history log
 3. If data is up to date, return "Data is Up to date" message
