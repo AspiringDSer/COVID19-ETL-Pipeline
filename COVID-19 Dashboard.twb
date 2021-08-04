@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0712.0907                               -->
+<workbook original-version='18.1' source-build='2021.1.4 (20211.21.0712.0907)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='total_cases_per_country (covid_etl_pipeline)' inline='true' name='federated.1nxzpov08aywky1arln5k091u4s7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='mysql.0ttcxek1jqvu5e122r4fn10c25m7'>
+            <connection class='mysql' dbname='covid_etl_pipeline' odbc-native-protocol='' one-time-sql='' port='3306' server='localhost' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.0ttcxek1jqvu5e122r4fn10c25m7' name='total_cases_per_continent' table='[total_cases_per_continent]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='mysql.0ttcxek1jqvu5e122r4fn10c25m7' name='total_cases_per_continent' table='[total_cases_per_continent]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[total_cases_per_continent]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[total_cases_per_continent_00CCE731C5B14FDB80074C35DAB3A19B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[location]</local-name>
+            <parent-name>[total_cases_per_continent]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[total_cases_per_continent_00CCE731C5B14FDB80074C35DAB3A19B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_cases</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[cumulative_cases]</local-name>
+            <parent-name>[total_cases_per_continent]</parent-name>
+            <remote-alias>cumulative_cases</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[total_cases_per_continent_00CCE731C5B14FDB80074C35DAB3A19B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Rankings' datatype='integer' name='[Calculation_1081708337498968064]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_UNIQUE(SUM([cumulative_cases]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='total_cases_per_continent' datatype='table' name='[__tableau_internal_object_id__].[total_cases_per_continent_00CCE731C5B14FDB80074C35DAB3A19B]' role='measure' type='quantitative' />
+      <column caption='Cumulative Cases' datatype='integer' name='[cumulative_cases]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Location' datatype='string' name='[location]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='total_cases_per_continent' id='total_cases_per_continent_00CCE731C5B14FDB80074C35DAB3A19B'>
+            <properties context=''>
+              <relation connection='mysql.0ttcxek1jqvu5e122r4fn10c25m7' name='total_cases_per_continent' table='[total_cases_per_continent]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Confirmed Cases By Continent'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='total_cases_per_country (covid_etl_pipeline)' name='federated.1nxzpov08aywky1arln5k091u4s7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nxzpov08aywky1arln5k091u4s7'>
+            <column caption='Rankings' datatype='integer' name='[Calculation_1081708337498968064]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_UNIQUE(SUM([cumulative_cases]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Cumulative Cases' datatype='integer' name='[cumulative_cases]' role='measure' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Location' datatype='string' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[location]' derivation='None' name='[none:location:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cumulative_cases]' derivation='Sum' name='[sum:cumulative_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1081708337498968064]' derivation='User' name='[usr:Calculation_1081708337498968064:ok:1]' pivot='key' type='ordinal'>
+              <table-calc ordering-field='[federated.1nxzpov08aywky1arln5k091u4s7].[location]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1nxzpov08aywky1arln5k091u4s7].[none:location:nk]' />
+              <text column='[federated.1nxzpov08aywky1arln5k091u4s7].[none:location:nk]' />
+              <text column='[federated.1nxzpov08aywky1arln5k091u4s7].[sum:cumulative_cases:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1nxzpov08aywky1arln5k091u4s7].[usr:Calculation_1081708337498968064:ok:1]</rows>
+        <cols>[federated.1nxzpov08aywky1arln5k091u4s7].[sum:cumulative_cases:qk]</cols>
+        <pages>
+          <column>[federated.1nxzpov08aywky1arln5k091u4s7].[tdy:date:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{0A0E094A-909B-4EC4-868B-4FD72405B3D5}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Confirmed Cases By Continent'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1nxzpov08aywky1arln5k091u4s7].[none:location:nk]' type='color' />
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2021-08-01 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1nxzpov08aywky1arln5k091u4s7].[none:location:nk]</field>
+            <field>[federated.1nxzpov08aywky1arln5k091u4s7].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A5CEE867-5FA5-446D-974F-B9DA90AEE1B3}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Confirmed Cases By Continent' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
