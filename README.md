@@ -81,4 +81,5 @@ The COVID-19 ETL Pipeline still needs further refinement. I  plan continue devel
 * Update Markdown and Comments 
 * Add Unit Testing
 * Improve Assertion in Python Scripts
-* Configure and implement Tableau Python (TabPy) to pipeline
+* Configure and Implement Tableau Python (TabPy) to Pipeline
+* Creating Package for Pipeline 
