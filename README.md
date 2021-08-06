@@ -13,25 +13,25 @@ This README documents the purpose of the project, how to setup the automated pip
 
 In order to setup, ensure that you have `conda` installed. 
 
-![Environment Guide](./images/environment_guide.png)
+1. Open `Anaconda Prompt` and ensure you are in the correct system path 
+2. Create conda environment
 
-1. Open your `Anaconda Navigator` and click on the `Environments` Tab.
-2. Click on the `Import` Tab. Create a name for the virtual  environment and specify the path file for where `environment.yml` is located. 
-
-3. Click `Import` to create virtual environment. 
-
-4. Open `Anaconda Prompt`
-
-5. Activate the environment with `conda activate myenv` 
+    ```
+    conda env create -f environment.yml
+    ```
+3. Activate conda environment 
+    ```
+    conda activate COVID_ETL
+    ```
 
 **Run Pipeline**
 
-Setup ETL Pipeline 
+Please execute the following commands to:
 
+Setup ETL Pipeline 
 ```
 python ETL_setup.py
 ```
-
 Update ETL Pipeline
 ```
 python ETL_update.py
