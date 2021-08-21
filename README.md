@@ -1,7 +1,7 @@
 # **COVID-19 ETL Pipeline**
 
 # Preface
-This README documents the purpose of the project, how to setup the automated pipeline, and future plan for development. This project was expanded based my [COVID-19 Data Exploration Project](https://github.com/AspiringDSer/PortfolioProjects/tree/main/SQL-Projects/COVID-19_Data_Exploration_Project) and [COVID-19 Tableau Dashboard Project](https://github.com/AspiringDSer/PortfolioProjects/tree/main/Tableau-Projects/COVID-19_Dashboard). For more details about the initial work, please refer to the provided links.  
+This README documents the purpose of the project, how to setup the automated pipeline, and future plan for development. This project was expanded based on my [COVID-19 Data Exploration Project](https://github.com/AspiringDSer/PortfolioProjects/tree/main/SQL-Projects/COVID-19_Data_Exploration_Project) and [COVID-19 Tableau Dashboard Project](https://github.com/AspiringDSer/PortfolioProjects/tree/main/Tableau-Projects/COVID-19_Dashboard). For more details about the initial work, please refer to the provided links.  
 
 # Table of Content 
 1. [Setup](#Setup)
