@@ -45,7 +45,7 @@ The pipeline is used to extract and preprocess COVID-19 Data from ourworldindata
 
 ![Confirmed Cases By Continent](./images/Confirmed_Cases_By_Continent.png)
 
-[Tableau Public](https://public.tableau.com/views/COVID-19ConfirmedCasesByContinent/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link) - Due to Tableau Public, the data is static and you cannot view the animations. The data is relevant up till Aug 2nd 2021. I have attached a MP4 recording of the animations. In addition, you can activate animations in the Tableau Workbook to see the confirmed cases per day per continent. 
+[Tableau Public](https://public.tableau.com/views/COVID-19ConfirmedCasesByContinent/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link) - Due to Tableau Public, the data is static and you cannot view the animations. The data is relevant up till Aug 2nd 2021. I have attached a [MP4 recording](https://github.com/AspiringDSer/COVID19-ETL-Pipeline/blob/master/Confirmed_Cases_By_Continent%20-%20Dashboard%20Video.mp4) (click view raw) of the animations. In addition, you can activate animations in the Tableau Workbook to see the confirmed cases per day per continent. 
 
 **Files:**
 
